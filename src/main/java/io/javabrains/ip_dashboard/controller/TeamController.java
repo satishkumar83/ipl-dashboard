@@ -5,14 +5,12 @@ import io.javabrains.ip_dashboard.repository.MatchRepository;
 import io.javabrains.ip_dashboard.repository.TeamRepository;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TeamController {
 
     private final TeamRepository teamRepository;
